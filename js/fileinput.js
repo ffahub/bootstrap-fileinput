@@ -650,7 +650,8 @@
             tCaption = '<div class="file-caption form-control {class}" tabindex="500">\n' +
                 '  <span class="file-caption-icon"></span>\n' +
                 '  <input class="file-caption-name" onkeydown="return false;" onpaste="return false;">\n' +
-                '</div>';
+								'  <input type="hidden" class="imageCaption" name="imageCaption" />\n' +								
+								'</div>';
             //noinspection HtmlUnknownAttribute
             tBtnDefault = '<button type="{type}" tabindex="500" title="{title}" class="{css}" ' +
                 '{status}>{icon} {label}</button>';
@@ -3221,6 +3222,7 @@
             }
             self.$captionContainer.addClass('icon-visible');
             self.$caption.attr('title', title).val(out);
+						self.$captionContainer.find('.imageCaption').attr('value', title);						
             self.$captionIcon.html(icon);
         },
         _createContainer: function () {
@@ -3922,6 +3924,7 @@
                 cap = (!self.overwriteInitial && self.initialCaption.length > 0) ? self.initialCaption : '';
                 self.$caption.attr('title', '').val(cap);
                 $h.addCss(self.$container, 'file-input-new');
+								self.$container.find('.imageCaption').attr('value', '');																
                 self._validateDefaultPreview();
             }
             if (self.$container.find($h.FRAMES).length === 0) {
