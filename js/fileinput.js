@@ -3222,7 +3222,6 @@
             }
             self.$captionContainer.addClass('icon-visible');
             self.$caption.attr('title', title).val(out);
-						self.$captionContainer.find('.imageCaption').attr('value', title);					 	
             self.$captionIcon.html(icon);
         },
         _createContainer: function () {
