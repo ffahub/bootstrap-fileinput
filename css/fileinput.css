@@ -181,11 +181,8 @@
 }
 
 .file-preview {
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    padding: 8px;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .file-preview .btn-xs {
@@ -199,6 +196,7 @@
     top: 1px;
     right: 1px;
     line-height: 10px;
+		display:none!important;
 }
 
 .file-preview .clickable {
@@ -211,25 +209,12 @@
 }
 
 .krajee-default.file-preview-frame {
-    margin: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 1px 1px 5px 0 #a2958a;
-    padding: 6px;
-    float: left;
     text-align: center;
-}
-
-.krajee-default.file-preview-frame .kv-file-content {
-    width: 213px;
-    height: 160px;
 }
 
 .krajee-default.file-preview-frame .file-thumbnail-footer {
     height: 70px;
-}
-
-.krajee-default.file-preview-frame:not(.file-preview-error):hover {
-    box-shadow: 3px 3px 5px 0 #333;
+		display:none!important;
 }
 
 .krajee-default .file-preview-text {
